@@ -11,5 +11,5 @@
 10-back			#changes Working dir to the previous one
 11-lists		#list all files from the current dir, parent dire and /boot dir including hidden ones
 12-file_type		# determines the type of file that iamafile is from /tmp dir
-
+13-symbolic_link	#Creates symbolic link named __ls__ in current working dir to /bing/ls
 14-copy_html		# copies .html files from current dir to parent dir that didnot exist in the parent dir or are newer versions 
