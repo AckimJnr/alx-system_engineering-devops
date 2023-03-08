@@ -2,4 +2,6 @@
 1-listit                    #Displays the content of your current dir
 2-bring_me_home	            #Changes user's dir to home
 3-listfiles              #Displays current dir contents in a long format
-4-listmorefiles		#Displays current dire contents includin hidden 			files in a long format
+4-listmorefiles		#Displays current dire contents includin hidden 					files in a long format
+5-listfilesdigitonly	# Displays current dir contents in a long format with gro			up ID displayed numerically and with hidden files
+
