@@ -13,4 +13,5 @@
 12-directory_permissions #Create directory called my_dir with permissions 751 in the working directory
 13-change_group	#Change group owner of file called hello in current dir to school
 ######Advanced####
-100-change_owner_and_group	#change owner to vincent and group owner to starff for all the files and directories in the working directory
+100-change_owner_and_group	#change owner to vincent and group owner to staff for all the files and directories in the working directory
+101-symbolic_link_permissions	#Change owner of _hello to vincent and sstaff(group)
