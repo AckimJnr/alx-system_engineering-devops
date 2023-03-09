@@ -11,3 +11,4 @@
 10-mirror_permissions #Mirror olleh's permissions to hello
 11-directories_permissions #Add execute permitions to all subdirectories of the current directory for the owner and the group owner and other users
 12-directory_permissions #Create directory called my_dir with permissions 751 in the working directory
+13-change_group	#Change group owner of file called hello in current dir to school
