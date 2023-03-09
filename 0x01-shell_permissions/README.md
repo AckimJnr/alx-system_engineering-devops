@@ -10,3 +10,4 @@
 9-John_Doe	#Change mode of hello to -rwxr-x-wx
 10-mirror_permissions #Mirror olleh's permissions to hello
 11-directories_permissions #Add execute permitions to all subdirectories of the current directory for the owner and the group owner and other users
+12-directory_permissions #Create directory called my_dir with permissions 751 in the working directory
