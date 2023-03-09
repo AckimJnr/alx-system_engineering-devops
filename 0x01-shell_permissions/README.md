@@ -7,3 +7,4 @@
 6-multiple_permissions	#Add execute permission to owner and group owner and read permisson to other users
 7-everybody	#Give execution permission to everyone
 8-James_Bond	#Give all permissions to others and none to all remaining users
+9-John_Doe	#Change mode of hello to -rwxr-x-wx
