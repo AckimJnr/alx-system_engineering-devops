@@ -12,3 +12,5 @@
 11-directories_permissions #Add execute permitions to all subdirectories of the current directory for the owner and the group owner and other users
 12-directory_permissions #Create directory called my_dir with permissions 751 in the working directory
 13-change_group	#Change group owner of file called hello in current dir to school
+######Advanced####
+100-change_owner_and_group	#change owner to vincent and group owner to starff for all the files and directories in the working directory
