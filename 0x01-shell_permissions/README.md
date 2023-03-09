@@ -8,3 +8,4 @@
 7-everybody	#Give execution permission to everyone
 8-James_Bond	#Give all permissions to others and none to all remaining users
 9-John_Doe	#Change mode of hello to -rwxr-x-wx
+10-mirror_permissions #Mirror olleh's permissions to hello
