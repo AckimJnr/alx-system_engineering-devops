@@ -15,3 +15,4 @@
 ######Advanced####
 100-change_owner_and_group	#change owner to vincent and group owner to staff for all the files and directories in the working directory
 101-symbolic_link_permissions	#Change owner of _hello to vincent and sstaff(group)
+102-if_only	#Change owner of the file hello if and only if it is owned by the user guillaume
