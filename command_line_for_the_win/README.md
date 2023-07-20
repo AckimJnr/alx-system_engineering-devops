@@ -1,4 +1,4 @@
-#I followed the following steps to upload my files to
+# I followed the following steps to upload my files to
 # the sandbox
 
 1. Open windows powershell
