@@ -5,6 +5,7 @@
 
 2. Opened my intranet and copied the sftp command
    from the ubuntu 20.4 virtual sandbox
+	- ie sftp <hostname>
 
 3. Entered my sandbox password after the prompt for a password
 
