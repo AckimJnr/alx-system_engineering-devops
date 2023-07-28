@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # print the 23 hrs 59 mins
 hours=0
-minutes=0
+minutes=1
 
 while [[ $hours -lt 24 ]]; do
 	echo "Hour: $hours"
@@ -9,6 +9,6 @@ while [[ $hours -lt 24 ]]; do
 		echo $minutes
 		minutes=$((minutes + 1))
 	done
-	minutes=0
+	minutes=1
 	hours=$((hours + 1))
 done
