@@ -2,8 +2,6 @@
 # print files without the '-' character
 
 for file in *; do
-	if [[ ! "$file" =~ ^\. ]] && [[ "$file" =~ - ]]; then
-		name_without_dash=${file#*-}
-		echo "$name_without_dash"
-	fi
+	name_without_dash=${file#*-}
+	echo "$name_without_dash"
 done
