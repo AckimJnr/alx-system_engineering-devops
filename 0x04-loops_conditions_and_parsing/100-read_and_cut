@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# read file
+file="/etc/passwd"
+
+if [ ! -r "$file" ]; then
+    echo "Error: File $file not found or not readable."
+    exit 1
+fi
+
+while IFS=":" read -r username _ uid _ home _; do
+    echo "$username:$uid:$home"
+done < "$file"
+
