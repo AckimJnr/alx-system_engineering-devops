@@ -3,8 +3,12 @@
 hours=0
 minutes=1
 
-while [[ $hours -lt 24 ]]; do
-	echo "Hour: $hours"
+while [[ $hours -lt 13 ]]; do
+	if [[ hours -gt 1 ]]; then
+		echo "Hours: $hours"
+	else
+		echo "Hour: $hours"
+	fi
 	while [[ $minutes -lt 60 ]]; do
 		echo $minutes
 		minutes=$((minutes + 1))
