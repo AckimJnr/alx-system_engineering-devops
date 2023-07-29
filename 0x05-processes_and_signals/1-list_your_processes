@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# gives a detailed view of procs in the sys
+ps -e --forest --format "user,pid,%cpu,%mem,cmd,vsz,rss,tty,stat,start,time,cmd"
