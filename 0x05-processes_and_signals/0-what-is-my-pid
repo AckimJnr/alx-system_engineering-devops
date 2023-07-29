@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#displays own process ID
+_pid=$$
+echo "$_pid"
