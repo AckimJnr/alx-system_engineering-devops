@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# pings a given IP address 5 times
+
+netstat -p
+netstat -a
