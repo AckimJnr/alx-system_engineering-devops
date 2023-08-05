@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# port listening
+listen_to() {
+	while read -r line; do
+	echo "$line"
+		done
+}
+nc -l localhost 98 | listen_to
