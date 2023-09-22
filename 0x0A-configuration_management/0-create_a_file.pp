@@ -1,3 +1,7 @@
+# Manifest version: 1.0.0
+# Author: Your Name
+# Description: Puppet manifest for managing /tmp/school file
+
 exec { 'file':
     command => '/usr/bin/echo I love Puppet > /tmp/school'
 }
