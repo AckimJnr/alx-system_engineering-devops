@@ -1,5 +1,5 @@
 # Manifest version: 1.0.0
-# Author: Your Name
+# Author: AckimJnr
 # Description: Puppet manifest for managing /tmp/school file
 
 exec { 'file':
