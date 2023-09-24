@@ -2,4 +2,6 @@
 # creates an RSA key pair called school
 # with 4096 bits and protected by the passphrase
 # called betty
-ssh-keygen -b 4096 -p 'betty' -o school
+
+key_name = "school"
+ssh-keygen -b 4096 -f "./$key_name" -N 'betty'
