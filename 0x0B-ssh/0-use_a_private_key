@@ -2,5 +2,5 @@
 #connects to a remote host using a private key
 
 private_key="~/.ssh/school"
-server="52.91.135.87"
+server=52.91.135.87
 ssh -i $private_key ubuntu@$server
