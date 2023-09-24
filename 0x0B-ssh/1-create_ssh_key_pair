@@ -3,5 +3,8 @@
 # with 4096 bits and protected by the passphrase
 # called betty
 
-key_name = "school"
-ssh-keygen -b 4096 -f "$key_name" -N 'betty'
+KEY_NAME = "school"
+PASSPHRASE = "betty"
+BITS = 4096
+
+ssh-keygen -t rsa -b $BITS -f "$KEY_NAME" -N "$PASSPHRASE"
