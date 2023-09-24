@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 #connects to a remote host using a private key
 
-private_key="$HOME/.ssh/school"
-server="52.206.238.2"
-ssh -i "$private_key" ubuntu@$server
+ssh -i ~/.ssh/school ubuntu@52.206.238.2
