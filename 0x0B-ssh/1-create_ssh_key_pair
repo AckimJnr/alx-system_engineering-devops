@@ -4,4 +4,4 @@
 # called betty
 
 key_name = "school"
-ssh-keygen -b 4096 -f "./$key_name" -N 'betty'
+ssh-keygen -b 4096 -f "$key_name" -N 'betty'
