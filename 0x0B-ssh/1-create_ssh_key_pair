@@ -8,3 +8,12 @@ PASSPHRASE = "betty"
 BITS = 4096
 
 ssh-keygen -t rsa -b $BITS -f "$KEY_NAME" -N "$PASSPHRASE"
+
+# Display the key information
+echo "Generating public/private rsa key pair."
+echo "Your identification has been saved in $KEY_NAME."
+echo "Your public key has been saved in $KEY_NAME.pub."
+echo "The key fingerprint is:"
+ssh-keygen -l -f "$KEY_NAME"
+echo "The key's randomart image is:"
+ssh-keygen -l -v -f "$KEY_NAME"
