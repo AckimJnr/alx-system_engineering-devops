@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-echo "Host *" >> ~/.ssh/config
-echo "    IdentityFile ~/.ssh/school" >> ~/.ssh/config
-echo "    PasswordAuthentication no" >> ~/.ssh/config
+mkdir -p ~/.ssh/config
 
-echo "SSH client configuration updated."
+echo -e "Host *\n  IdentityFile ~/.ssh/school\n  PasswordAuthentication no" > ~/.ssh/config
+echo "SSH client configuration updated. You can now connect to servers without a password."
