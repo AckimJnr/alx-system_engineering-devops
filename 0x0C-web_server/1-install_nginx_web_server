@@ -8,8 +8,6 @@ apt-get -y install nginx
 
 echo "Hello World" > /var/html/index.html
 
-service nginx start
-
 if pgrep nginx >/dev/null; then
 	echo "Nginx is running"
 else
