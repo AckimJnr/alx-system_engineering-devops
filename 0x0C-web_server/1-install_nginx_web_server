@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# installs nginx on a server
+# configures a helloworld html file
+
+apt-get -y update
+apt-get -y install nginx
+
+echo "Hello World" > /var/html/index.html
+
+service nginx start
+
+if pgrep nginx >/dev/null; then
+	echo "Nginx is running"
+else
+	echo "Nginx is not running"
+fi
+
+exit 0
