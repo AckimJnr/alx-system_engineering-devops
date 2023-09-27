@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# configures a new server with nginx
+# creates a redirection of redirect_me
+
+# nginx installation
+
+apt-get -y update
+apt-get -y install nginx
+
+#create the configuration file
+
+cat <<EOL > /etc/nginx/sites-available/redirect_me
+server {
+  listen 80;
+  server_name 324143-web-01;
+
+  location /redirect_me {
+    return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
+  }
+
+# enable the configurations file
+
+include /etc/nginx/sites-enabled/*;
+
+}
+EOL
+
+ln -s /etc/nginx/sites-available/redirect_me /etc/nginx/sites-enabled/
+
+# test
+nginx -t
+
+service nginx reload
+
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+
+service nginx start
