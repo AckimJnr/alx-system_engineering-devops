@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#adds servername local host to apache config file
+echo 'ServerName localhost' >> /etc/apache2/apache2.conf
+service apache2 restart
