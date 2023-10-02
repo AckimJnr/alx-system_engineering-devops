@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# installs nginx in a machine
+# then configure a custom header in nginx that contains its name
+# the header taking the format
+# 
+
+apt-get -y update
+apt-get -y install nginx
+
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+
+echo "add_header X-Served-By \$hostname;" >> "/etc/nginx/nginx.conf"
+
+service nginx start
