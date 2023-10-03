@@ -26,6 +26,7 @@ defaults
     timeout connect 5000
     timeout client 50000
     timeout server 50000
+    option http-server-close
 
 frontend main
     bind *:80
@@ -45,6 +46,3 @@ sudo systemctl enable haproxy
 
 # Verify HAProxy configuration
 sudo haproxy -c -f /etc/haproxy/haproxy.cfg
-
-# Output a message indicating successful configuration
-echo "HAProxy has been successfully configured and is now managing traffic between [STUDENT_ID]-web-01 and [STUDENT_ID]-web-02."
