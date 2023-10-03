@@ -1,14 +1,31 @@
 #!/usr/bin/env bash
-# installs nginx in a machine
-# then configure a custom header in nginx that contains its name
-# the header taking the format
-# 
+# Configures a new Ubuntu machine to be identical to a web server (e.g., web-01)
+# Adds a custom Nginx response header to track which web server is answering HTTP requests
 
+# Get the hostname dynamically
+hostname=$(hostname)
+
+# Nginx installation
 apt-get -y update
 apt-get -y install nginx
 
+# Create a file with the custom Nginx response header
+echo "add_header X-Served-By $hostname;" > /etc/nginx/custom-header.conf
+
+# Create a symbolic link to enable the custom header configuration
+ln -s /etc/nginx/custom-header.conf /etc/nginx/sites-enabled/
+
+# Test Nginx configuration
+nginx -t
+
+# Reload Nginx to apply changes
+service nginx reload
+
+# Create a basic HTML file for testing
 echo "Hello World!" > /var/www/html/index.nginx-debian.html
 
-echo "add_header X-Served-By \$hostname;" >> "/etc/nginx/nginx.conf"
-
+# Start Nginx service
 service nginx start
+
+echo "Script completed successfully."
+exit 0
