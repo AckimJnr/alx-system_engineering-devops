@@ -3,13 +3,13 @@ package { 'nginx':
   ensure => installed,
 }
 
-# Get the Fully Qualified Domain Name (FQDN) dynamically
-$fqdn = $facts['networking']['fqdn']
+# Get the hostname dynamically
+$hostname = $facts['hostname']
 
 # Create a file with the custom Nginx response header
 file { '/etc/nginx/custom-header.conf':
   ensure  => present,
-  content => "add_header X-Served-By ${fqdn};\n",
+  content => "add_header X-Served-By ${hostname};\n",
 }
 
 # Create a symbolic link to enable the custom header configuration
@@ -50,4 +50,3 @@ service { 'nginx-start':
 notify { 'Script completed successfully.':
   require => Service['nginx-start'],
 }
-
