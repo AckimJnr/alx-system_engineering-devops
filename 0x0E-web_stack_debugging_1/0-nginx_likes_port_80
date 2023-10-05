@@ -1,33 +1,20 @@
 #!/usr/bin/env bash
 
-# Update package list
-apt-get update
+# Default NGINX configuration file
+sites_available_config_file="/etc/nginx/sites-available/default"
+sites_enabled_config_file="/etc/nginx/sites-enabled/default"
 
-# Install Nginx
-apt-get install -y nginx
+# Stop NGINX
+service nginx stop
 
-# Get the list of active IPv4 addresses
-ipv4_addresses=$(ip -4 addr show scope global | grep inet | awk '{print $2}' | cut -d'/' -f1)
+# Edit NGINX configuration to listen on port 80
+sed -i 's/listen 8080;/listen 80;/g' "$sites_available_config_file"
+sed -i 's/ listen 8080;/ listen 80;/g' "$sites_available_config_file"
+sed -i 's/ ipv6only=on//g' "$sites_available_config_file"
 
-# Configure Nginx to listen on port 80 for all active IPv4 addresses
-cat > /etc/nginx/sites-available/default <<EOL
-server {
-    listen 80;
-    listen [::]:80;
+#delete the default file
+rm "$sites_enabled_config_file"
 
-    server_name _;
-
-    location / {
-        root /var/www/html;
-        index index.html index.htm;
-    }
-}
-EOL
-
-# Restart Nginx to apply the changes
-systemctl restart nginx
-
-# Print success message
-echo "Nginx is now configured to listen on port 80 for the following IP addresses:"
-echo "$ipv4_addresses"
-
+cp "$sites_available_config_file" "$sites_enabled_config_file"
+# Start NGINX
+service nginx restart
