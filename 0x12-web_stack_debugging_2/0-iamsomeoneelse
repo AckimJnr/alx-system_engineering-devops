@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 # executes the identity command on another user
 
-#if [ "$#" -ne 1 ]; then
-#    echo "Usage: $0 <username>"
-#    exit 1
-#fi
-su "$1" -c 'whoami'
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <username>"
+    exit 1
+fi
+user=$1
+su - "$user" -c 'whoami'
