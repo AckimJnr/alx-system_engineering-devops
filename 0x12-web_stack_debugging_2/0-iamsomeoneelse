@@ -6,4 +6,4 @@ if [ "$#" -ne 1 ]; then
     exit 1
 fi
 user=$1
-su - "$user" -c 'whoami'
+runuser -u "$user" 'whoami'
