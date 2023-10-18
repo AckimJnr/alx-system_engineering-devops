@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# Sets up nginx user
 if ! command -v sudo &> /dev/null; then
   apk add --no-cache sudo
 fi
