@@ -3,4 +3,4 @@
 
 mysql -u root -p "$1" mysqldump > backup.sql
 
- tar -zcvf "$(date '+%Y-%m-%d').tar.gz" backup.sql
+ tar -zcvf "$(date '+%d-%m-%Y').tar.gz" backup.sql
