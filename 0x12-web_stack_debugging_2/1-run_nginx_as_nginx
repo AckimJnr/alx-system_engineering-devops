@@ -22,9 +22,3 @@ fi
 
 # Restart Nginx to apply the changes
 service nginx restart
-
-# Verify that Nginx is running as the nginx user
-ps aux | grep nginx
-
-# Check if Nginx is listening on port 8080
-nc -z -v -w 1 localhost 8080
