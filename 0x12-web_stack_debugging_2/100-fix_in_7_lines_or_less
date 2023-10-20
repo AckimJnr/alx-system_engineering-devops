@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# run by nginx user
+command -v sudo || apk add --no-cache sudo
+id -u nginx || adduser -D -H -s /sbin/nologin nginx
+sed -i 's/user nginx;/user nginx;/' /etc/nginx/nginx.conf
+sed -i 's/listen 80;/listen 8080 default_server;/' /etc/nginx/conf.d/default.conf
+service nginx restart
