@@ -44,4 +44,5 @@ if __name__ == '__main__':
             employee_name, completed, total_tasks))
 
         for task in employee_tasks:
-            print('\t' + task.get('title'))
+            if task.get('completed'):
+                print('\t ' + task.get('title'))
