@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """Fetch employee records from an api"""
-import sys
-import requests
 import json
+import requests
+import sys
 
 
 def get_username(userId):
@@ -40,7 +40,7 @@ if __name__ == '__main__':
         for task in employee_tasks:
             if task.get('completed'):
                 completed += 1
-        print("Employee {} is done with tasks({}/{})".format(
+        print("Employee {} is done with tasks({}/{}):".format(
             employee_name, completed, total_tasks))
 
         for task in employee_tasks:
