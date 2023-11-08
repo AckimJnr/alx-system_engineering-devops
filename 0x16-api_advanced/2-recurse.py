@@ -23,8 +23,9 @@ def recurse(subreddit, hot_list=None, after=None):
             )
 
     if response.status_code == 200:
-        url = f"https://www.reddit.com\
-                /r/{subreddit}/hot.json?limit=100&after={after}"
+        query_string = f"limit=100&after={after}"
+        url_base = f"https://www.reddit.com/r/{subreddit}/hot.json?"
+        url = url_base + query_string
         response = requests.get(
                 url,
                 headers={'User-Agent': 'Reddit API Example'},
