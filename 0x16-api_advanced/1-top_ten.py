@@ -8,9 +8,10 @@ import requests
 def top_ten(subreddit):
     """
     @subreddit: the subreddit to be checked
+    Prints the subreddit if found
     """
     url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
-    response = requests.get(url, allow_redirects=False)
+    response = requests.get(url)
 
     if response.status_code == 200:
         url = f"https://www.reddit.com/r/{subreddit}/hot.json?limit=10"
@@ -20,10 +21,10 @@ def top_ten(subreddit):
             data = response.json()
             posts = data.get('data', {}).get('children', [])
 
-            for post in posts:
+            for i, post in enumerate(posts, start=1):
                 title = post['data']['title']
                 print(f"{title}")
         else:
-            print(None)
+            print("Fetch failed")
     else:
-        print(None)
+        print("None")
