@@ -23,7 +23,7 @@ def top_ten(subreddit):
 
             for i, post in enumerate(posts, start=1):
                 title = post['data']['title']
-                print(f"{title}")
+                print(title)
         else:
             print("Fetch failed")
     else:
