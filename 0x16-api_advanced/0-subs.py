@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Constas a function that retrieves the number of subscribers for a subredit
+Contains a function that retrieves the number of
+subscribers for a subredit
 """
 import requests
 
@@ -11,7 +12,10 @@ def number_of_subscribers(subreddit):
     """
     url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
 
-    response = requests.get(url)
+    headers = {
+        'User-Agent': 'advancedApi/1.0 (by /u/AckimJnr)'
+    }
+    response = requests.get(url, headers=headers)
 
     if response.status_code == 200:
         data = response.json()
