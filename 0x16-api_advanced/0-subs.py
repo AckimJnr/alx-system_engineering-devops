@@ -10,7 +10,7 @@ def number_of_subscribers(subreddit):
     """
     @subreddit: the subredit to be checked
     """
-    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
+    url = f"https://www.reddit.com/r/{subreddit}/about.json"
 
     headers = {
         'User-Agent': 'pyscript1.0'
